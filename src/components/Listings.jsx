@@ -1,7 +1,7 @@
 function Listings() { 
     return (
         <div>
-            <p>Hello from Listings</p>
+            <p>Hallo from Listings!</p>
         </div>
     )
 }
