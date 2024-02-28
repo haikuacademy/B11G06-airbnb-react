@@ -1,9 +1,11 @@
 import Gallery from './Gallery'
 import Reviews from './Reviews'
+import NavBar from './Nav'
 
 function House() {
   return (
     <div>
+      <NavBar />
       <div className="grid grid-cols-2 gap-2 bg-pink-200">
         <div className="bg-pink-600">1</div>
         <div>
