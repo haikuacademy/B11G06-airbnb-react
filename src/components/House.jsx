@@ -4,62 +4,59 @@ import NavBar from './Nav'
 
 function House() {
   return (
-    <div>
+    <div className="m-2">
       <NavBar />
-      <div className="grid grid-cols-2 gap-2 bg-pink-200">
-        <div className="bg-pink-600">1</div>
-        <div>
-          <Gallery />
-        </div>
+      <div className=" bg-pink-200 grid grid-cols-2 gap-8">
+        <div className=" bg-pink-600">1</div>
+        <Gallery />
       </div>
-      <div className="grid grid-cols-3 gap-32 bg-pink-200">
-        <div className="bg-pink-600 col-span-2 ">3</div>
-        <div className="bg-pink-600">4</div>
-      </div>
-      <div className="grid grid-cols-3 gap-32">
-        <div className=" col-span-2 ">
-          <div>
-            <div className=" mt-2 mb-2 text-2xl font-bold">
-              Phuket, Thailand
-            </div>
-            <div className=" mt-2 mb-2 text-md text-gray-400">
-              2 rooms · 2 bathrooms
-            </div>
+      <div className=" border-b-2 border-gray-400 pb-5 grid grid-cols-3 gap-28">
+        <div className=" col-span-2">
+          <div className="text-xl font-bold mt-5">Phuket, Thailand</div>
+          <div className="text-sm text-gray-400 mt-5">
+            2 rooms · 2 bathrooms
           </div>
-          <div className="mt-2 mb-2 flex gap-2 justify-start">
-            <div className=" inline bg-blue-600 col-span-2">3.1</div>
+          <div className=" flex gap-2 mt-5">
+            <div className=" bg-blue-600">3.1</div>
             <div className=" block">
               <div className="text-sm text-gray-400">Hosted by</div>
-              <div className="text-md">Linda Smith</div>
+              <div>Linda Smith</div>
             </div>
           </div>
-          <div>
-            <div className="mt-2 mb-2 text-sm">
-              Nested on a serene beachfront, this charming Airbnb house offers a
-              picturesque escape. The exterior boasts a classic beach house
-              aethetic withwathered wood siding and spacious wrap-around deck,
-              perfect for savoring the ocean breeze. Inside, you're greeted by
-              an open-concept living area bathed in natural light, complemented
-              by cozy furnishings and nautical accents. The house features three
-              comfortable bedrooms, each with a unique coastal theme, and two
-              modern bathrooms.
-            </div>
+          <div className="text-sm mt-5">
+            Nestled on a serene beachfront, this charming Airbnb house offers a
+            picturesque escape. The exterior boasts a classic beach house
+            aesthetic with weathered wood siding and a spacious wrap- around
+            deck, perfect for savoring the ocean breeze. Inside, you're greeted
+            by an open-concept living area bathed in natural light, complemented
+            by cozy furnishings and nautical accents. The house features three
+            comfortable bedrooms, each with a unique coastal theme, and two
+            modern bathrooms. The fully equipped kitchen opens to a dining area
+            that's ideal for intimate meals ol entertaining guests. Large glass
+            doors in the living room lead to the deck, where you can enjoy
+            stunning sunset views over the ocean. This idyllic retreat is a
+            stone's throw away from the soft sandy beach, making it the perfect
+            spot for beach lovers and those seeking a tranquil getaway.
           </div>
         </div>
-        <div className=" mt-2 mb-10 grid grid-cols-1 grid-rows-2 ">
-          <div className=" border-2 border-gray-300 rounded p-2 flex justify-between">
-            <div className="">
-              <div className="text-m font-bold">
-                <strong>$120 </strong>
-                <span className=" text-gray-400">/night</span>
-              </div>
-              3 nights = <strong>$360</strong>
+        <div>
+          <div className="border-2 border-gray-400 mt-5 p-4">
+            <div>
+              <span className=" font-bold">$120</span>
+              <span className=" text-sm text-gray-400 font-bold">/ night</span>
             </div>
-            <div className="bg-blue-600">4.2</div>
+            <div className=" flex justify-between">
+              <div>
+                3 nights = <span className="font-bold">$360</span>
+              </div>
+              <div className=" bg-blue-600">4.2</div>
+            </div>
           </div>
         </div>
       </div>
-      <Reviews />
+      <div>
+        <Reviews />
+      </div>
     </div>
   )
 }
