@@ -19,7 +19,7 @@ function Houses() {
         <div className="bg-pink-600">7</div>
       </div>
     </div>
-    )
+  )
 }
 
 export default Houses
