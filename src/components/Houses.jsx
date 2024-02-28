@@ -7,7 +7,7 @@ function Houses() {
     <div>
       <NavBar />
       <Filter />
-      <div className=" grid grid-cols-5 grid-rows-2 bg-pink-200 gap-2">
+      <div className=" grid grid-cols-5 grid-rows-2 ">
         <HouseCard />
         <HouseCard />
         <HouseCard />
