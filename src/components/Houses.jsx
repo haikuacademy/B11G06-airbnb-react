@@ -1,6 +1,9 @@
+import NavBar from './Nav'
+
 function Houses() {
   return (
     <div>
+      <NavBar />
       <div className=" flex justify-between bg-blue-200">
         <div className="bg-blue-600">1</div>
         <div className="bg-blue-600">2</div>
@@ -19,7 +22,7 @@ function Houses() {
         <div className="bg-pink-600">7</div>
       </div>
     </div>
-    )
+  )
 }
 
 export default Houses
