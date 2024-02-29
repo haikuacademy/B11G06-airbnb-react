@@ -14,7 +14,7 @@ function Reviews() {
           <div className=" my-2">
             <form className="text-sm">
               <textarea
-                className="border w-80"
+                className="border w-80 p-1"
                 name="house-review"
                 placeholder="Please leave a review for this house.."
                 cols="30"
