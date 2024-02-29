@@ -20,12 +20,10 @@ function Reviews() {
                 cols="30"
                 rows="10"
               ></textarea>
+              <button className="flex justify-center w-40 p-2 border rounded my2 text-white bg-[#FB7185]">
+                Submit Review
+              </button>
             </form>
-          </div>
-          <div>
-            <button className="flex justify-center w-40 p-2 border rounded my2 text-white bg-[#FB7185]">
-              Submit Review
-            </button>
           </div>
         </div>
         <Review />

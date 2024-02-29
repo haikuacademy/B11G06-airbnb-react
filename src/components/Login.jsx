@@ -17,13 +17,13 @@ function Login() {
             <div className="text-sm text-gray-400 mt-2">Password</div>
             <input type="password" className="border rounded h-10" />
           </div>
+          <div className="flex justify-center mt-1 p-2">
+            <button className="flex justify-center border rounded bg-[#FB7185] text-white px-36 py-3">
+              Login
+            </button>
+          </div>
         </form>
-        <div className="flex justify-center mt-1 p-2">
-          <button className="flex justify-center border rounded bg-[#FB7185] text-white px-36 py-3">
-            Login
-          </button>
-        </div>
-        <div className="flex justify-start m-5 text-sm">
+        <div className="flex justify-start m-5 ml-6 text-sm">
           <p>
             New to Airbnb?
             <span className=" text-[#FB7185]"> Create an Account</span>
