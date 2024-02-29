@@ -2,7 +2,7 @@ function Signup() {
   return (
     <div className="container mx-auto">
       <div className="flex justify-center">
-        <div className="flex flex-col justify-center border-2 p-4 rounded-md w-80">
+        <div className="flex flex-col justify-center border-2 p-5 rounded-md w-80 mt-8">
           <form className="grid">
             {/* Logo */}
             <div className="flex justify-center py-4">
