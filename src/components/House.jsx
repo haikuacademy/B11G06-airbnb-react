@@ -17,7 +17,13 @@ function House() {
             2 rooms · 2 bathrooms
           </div>
           <div className=" flex gap-2 mt-5">
-            <div className=" bg-blue-600">3.1</div>
+            <div>
+              <img
+                className="rounded-full w-12 h-12"
+                src="https://randomuser.me/api/portraits/women/85.jpg"
+                alt="Host Profile"
+              />
+            </div>
             <div className=" block">
               <div className="text-sm text-gray-400">Hosted by</div>
               <div>Linda Smith</div>

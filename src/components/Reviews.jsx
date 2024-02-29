@@ -22,7 +22,13 @@ function Review() {
   return (
     <div className="border col-span-2 p-2 ">
       <div className="flex gap-2 justify-start">
-        <div className="bg-blue-600">5.1</div>
+        <div>
+          <img
+            className="rounded-full w-10 h-10"
+            src="https://randomuser.me/api/portraits/men/84.jpg"
+            alt="Host Profile"
+          />
+        </div>
         <div>
           <p className="text-xs text-gray-400">22 Jan 2024</p>
           <h6 className="text-xs">Mark Lino</h6>
