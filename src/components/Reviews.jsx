@@ -8,8 +8,24 @@ function Reviews() {
         </div>
         <div className="border p-4">
           <p className="text-sm font-bold">Leave a review</p>
-          <div>
+          <div className="my-2">
             <p className="text-xs">0</p>
+          </div>
+          <div className=" my-2">
+            <form className="text-sm">
+              <textarea
+                className="border w-80"
+                name="house-review"
+                placeholder="Please leave a review for this house.."
+                cols="30"
+                rows="10"
+              ></textarea>
+            </form>
+          </div>
+          <div>
+            <button className="flex justify-center w-40 p-2 border rounded my2 text-white bg-[#FB7185]">
+              Submit Review
+            </button>
           </div>
         </div>
         <Review />
