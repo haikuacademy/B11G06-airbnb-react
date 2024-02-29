@@ -8,7 +8,7 @@ function House() {
       <NavBar />
 
       <Gallery />
-      <div className=" border-b-2 border-gray-400 pb-5 grid grid-cols-3 gap-28">
+      <div className=" border-b-2 mb-4 pb-5 grid grid-cols-3 gap-28">
         <div className=" col-span-2">
           <div className="text-xl font-bold mt-5">Phuket, Thailand</div>
           <div className="text-sm text-gray-400 mt-5">
@@ -44,16 +44,33 @@ function House() {
           </div>
         </div>
         <div>
-          <div className="border-2 border-gray-400 mt-5 p-4">
+          <div className="border-2 mt-5 p-2">
             <div>
               <span className=" font-bold">$120</span>
               <span className=" text-sm text-gray-400 font-bold">/ night</span>
             </div>
-            <div className=" flex justify-between">
-              <div>
-                3 nights = <span className="font-bold">$360</span>
-              </div>
-              <div className=" bg-blue-600">4.2</div>
+            <div>
+              <form>
+                <input type="date" className="border mr-1 mb-2" />
+                <input type="date" className="border" />
+                <textarea
+                  className="border w-96 text-sm p-1"
+                  placeholder="Please send a message to the host.."
+                  name="comments-to-host"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <div className=" flex justify-between items-center">
+                  <div>
+                    3 nights = <span className="font-bold">$360</span>
+                  </div>
+                  <div>
+                    <button className="border rounded p-2 text-white bg-[#FB7185]">
+                      Reserve
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
