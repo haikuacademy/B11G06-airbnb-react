@@ -6,10 +6,8 @@ function House() {
   return (
     <div className="m-2">
       <NavBar />
-      <div className=" bg-pink-200 grid grid-cols-2 gap-8">
-        <div className=" bg-pink-600">1</div>
-        <Gallery />
-      </div>
+
+      <Gallery />
       <div className=" border-b-2 border-gray-400 pb-5 grid grid-cols-3 gap-28">
         <div className=" col-span-2">
           <div className="text-xl font-bold mt-5">Phuket, Thailand</div>
