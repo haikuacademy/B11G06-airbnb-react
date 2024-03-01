@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 
 function HouseCard() {
   return (
@@ -21,9 +24,37 @@ function HouseCard() {
             <div className="pt-1">
               <p className=" text-lg font-bold">price</p>
             </div>
-            <div className="flex justify-between pt-2">
-              <span className="text-xs">rating</span>
-              <span className="text-xs">n</span>
+            <div className="flex flex-wrap justify-between pt-2">
+              <div className="flex items-center justify-center">
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-[#FBBF24] text-sm"
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-[#FBBF24] text-sm"
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-[#FBBF24] text-sm"
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-[#FBBF24] text-sm"
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="text-[#FBBF24] text-sm"
+                />
+                <p className="ml-2 text-sm">5</p>
+              </div>
+              <div className="flex items-center justify-center">
+                <p className="ml-2 text-sm">12</p>
+                <FontAwesomeIcon
+                  icon={faCommentDots}
+                  className="text-gray-400 ml-2"
+                />
+              </div>
             </div>
           </div>
         </div>
