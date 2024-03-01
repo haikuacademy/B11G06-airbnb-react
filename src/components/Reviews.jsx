@@ -18,6 +18,9 @@ function Reviews() {
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <p className="text-xs">4.5</p>
           </div>
+          <h3 className="text-lg font-bold">Reviews</h3>
+          <p className="text-xs mb-4">4.5</p>
+          <Review />
         </div>
         <div className="border p-4">
           <p className="text-sm font-bold">Leave a review</p>
@@ -44,7 +47,6 @@ function Reviews() {
             </form>
           </div>
         </div>
-        <Review />
       </div>
     </div>
   )
