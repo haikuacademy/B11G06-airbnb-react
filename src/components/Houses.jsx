@@ -7,7 +7,7 @@ function Houses() {
     <div className="container mx-auto">
       <NavBar />
       <Filter />
-      <div className=" grid grid-cols-5 grid-rows-2 gap-3 ">
+      <div className=" grid grid-cols-5 grid-rows-2 gap-3 mt-3">
         <HouseCard />
         <HouseCard />
         <HouseCard />
