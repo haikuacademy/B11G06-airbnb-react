@@ -2,11 +2,54 @@ import NavBar from './Nav'
 
 function Profile() {
   return (
-    <div>
+    <div className="container mx-auto px-32">
       <NavBar />
-      <div className="flex flex-row bg-blue-200 gap-2">
-        <div className=" bg-blue-600">1</div>
-        <div className=" bg-blue-600">2</div>
+      <div className=" border-2 p-6">
+        {/*Your profile */}
+        <div className="py-4">
+          <h2 className="font-bold text-lg">Your Profile</h2>
+        </div>
+        {/*Image and url */}
+        <div className="flex flex-row items-center">
+          <div>
+            <img
+              src="https://randomuser.me/api/portraits/women/85.jpg
+"
+              alt="Profile pic"
+              className="rounded-full w-14 mr-4"
+            />
+          </div>
+          <div className="flex-auto border-2 rounded-sm my-4">
+            <input
+              type="link"
+              Placeholder="https://.."
+              className="p-2 w-full  "
+            />
+          </div>
+        </div>
+        {/* First Name*/}
+        <label className="text-sm font-semibold text-gray-500">
+          First Name
+        </label>
+        <div className="flex-auto border-2 rounded-sm mb-4">
+          <input className="p-2 w-full" placeholder="John" />
+        </div>
+        {/* Last Name*/}
+        <label className="text-sm font-semibold text-gray-500">Last Name</label>
+        <div className="flex-auto border-2 rounded-sm mb-4">
+          <input className="p-2 w-full" placeholder="John" />
+        </div>
+        {/* Email Name*/}
+        <label className="text-sm font-semibold text-gray-500">Email</label>
+        <div className="flex-auto border-2 rounded-sm mb-4">
+          <input className="p-2 w-full" placeholder="John" />
+        </div>
+        <div className="flex flex-row justify-between">
+          <button className="bg-[#FB7185] px-8 py-2 text-white rounded-sm">
+            Save Changes
+          </button>
+          <button className="border-2 px-8 py-2">Logout</button>
+        </div>
       </div>
     </div>
   )
