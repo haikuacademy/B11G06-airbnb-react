@@ -1,14 +1,32 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
+
 function Reviews() {
   return (
     <div>
       <div className="grid grid-cols-3 gap-x-32 p-2">
         <div className="col-span-2">
-          <h3 className="text-lg font-bold">Reviews</h3>
-          <p className="text-xs">4.5</p>
+          <div className="flex items-center gap-1">
+            <FontAwesomeIcon icon={faCommentDots} />
+            <h3 className="text-lg font-bold">Reviews</h3>
+          </div>
+          <div className=" flex items-center gap-1">
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <p className="text-xs">4.5</p>
+          </div>
         </div>
         <div className="border p-4">
           <p className="text-sm font-bold">Leave a review</p>
-          <div className="my-2">
+          <div className="flex gap-1 items-center my-2">
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <p className="text-xs">0</p>
           </div>
           <div className=" my-2">
