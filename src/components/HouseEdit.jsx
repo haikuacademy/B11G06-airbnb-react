@@ -1,4 +1,5 @@
 import NavBar from './Nav'
+import { Link } from 'react-router-dom'
 
 function HouseEdit() {
   return (
@@ -40,10 +41,14 @@ function HouseEdit() {
             placeholder="Please write a description..."
           ></textarea>
           <div className=" flex gap-2">
-            <button className="border rounded p-2 text-white bg-[#FB7185]">
+            <button className="border rounded p-2 text-white bg-[#FB7185] hover:shadow">
               Save Changes
             </button>
-            <button className="border rounded p-2">Cancel</button>
+            <Link to="/listings">
+              <button className="border rounded p-2 hover:shadow">
+                Cancel
+              </button>
+            </Link>
           </div>
         </div>
         <div className=" flex flex-col p-2 my-5">
