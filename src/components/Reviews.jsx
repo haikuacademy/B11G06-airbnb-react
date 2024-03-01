@@ -68,7 +68,12 @@ function Review() {
           <h6 className="text-xs">Mark Lino</h6>
         </div>
       </div>
-      <div className="pt-2">
+      <div className="flex gap-1 items-center pt-2">
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
         <p className="text-xs">5</p>
       </div>
       <div className="pt-2">
