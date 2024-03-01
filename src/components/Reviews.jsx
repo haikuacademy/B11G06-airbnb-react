@@ -4,7 +4,8 @@ function Reviews() {
       <div className="grid grid-cols-3 gap-x-32 p-2">
         <div className="col-span-2">
           <h3 className="text-lg font-bold">Reviews</h3>
-          <p className="text-xs">4.5</p>
+          <p className="text-xs mb-4">4.5</p>
+          <Review />
         </div>
         <div className="border p-4">
           <p className="text-sm font-bold">Leave a review</p>
@@ -26,7 +27,6 @@ function Reviews() {
             </form>
           </div>
         </div>
-        <Review />
       </div>
     </div>
   )
