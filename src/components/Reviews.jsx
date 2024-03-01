@@ -1,15 +1,35 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
+
 function Reviews() {
   return (
     <div>
       <div className="grid grid-cols-3 gap-x-32 p-2">
         <div className="col-span-2">
+          <div className="flex items-center gap-1">
+            <FontAwesomeIcon icon={faCommentDots} />
+            <h3 className="text-lg font-bold">Reviews</h3>
+          </div>
+          <div className=" flex items-center gap-1">
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <p className="text-xs">4.5</p>
+          </div>
           <h3 className="text-lg font-bold">Reviews</h3>
           <p className="text-xs mb-4">4.5</p>
           <Review />
         </div>
         <div className="border p-4">
           <p className="text-sm font-bold">Leave a review</p>
-          <div className="my-2">
+          <div className="flex gap-1 items-center my-2">
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+            <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <p className="text-xs">0</p>
           </div>
           <div className=" my-2">
@@ -48,7 +68,12 @@ function Review() {
           <h6 className="text-xs">Mark Lino</h6>
         </div>
       </div>
-      <div className="pt-2">
+      <div className="flex gap-1 items-center pt-2">
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
         <p className="text-xs">5</p>
       </div>
       <div className="pt-2">
