@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
-function Reviews() {
+function Reviews(props) {
   return (
     <div>
       <div className="grid grid-cols-3 gap-x-32 p-2">
@@ -16,7 +16,7 @@ function Reviews() {
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
-            <p className="text-xs">4.5</p>
+            <p className="text-xs">{props.rating}</p>
           </div>
           <h3 className="text-lg font-bold">Reviews</h3>
           <p className="text-xs mb-4">4.5</p>
