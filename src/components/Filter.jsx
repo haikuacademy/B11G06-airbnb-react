@@ -15,7 +15,7 @@ function Filter() {
       {/* Location */}
       <div className="flex w-full bg-white justify-left items-center text-xs rounded-md h-9 p-2">
         <FontAwesomeIcon icon={faHouse} className="p-2" />
-        <select>
+        <select className="w-full">
           <option selected className="text-xs">
             Any Location
           </option>
@@ -28,7 +28,7 @@ function Filter() {
       {/* Rooms */}
       <div className=" flex w-full bg-white justify-left items-center text-xs rounded-md h-9 p-2">
         <FontAwesomeIcon icon={faBed} className="p-2 " />
-        <select>
+        <select className="w-full">
           <option selected className="text-xs">
             Any Rooms
           </option>
