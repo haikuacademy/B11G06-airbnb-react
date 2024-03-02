@@ -45,15 +45,13 @@ function Reviews(props) {
           <div className="flex items-center gap-1">
             <h3 className="text-lg font-bold">{totReviews} Reviews</h3>
           </div>
-          <div className=" flex items-center gap-1">
+          <div className=" flex items-center gap-1 mb-8">
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
             <p className="text-xs">{props.rating}</p>
           </div>
-          <h3 className="text-lg font-bold">Reviews</h3>
-          <p className="text-xs mb-4">4.5</p>
           {reviews.map((review, index) => (
             <Review key={index} user={review} />
           ))}
@@ -90,7 +88,7 @@ function Reviews(props) {
 
 function Review(props) {
   return (
-    <div className="border col-span-2 p-2 ">
+    <div className="border col-span-2 p-2 mb-4 ">
       <div className="flex gap-2 justify-start">
         <img
           src={props.user.author.picture}
