@@ -4,12 +4,15 @@ import NavBar from './Nav'
 function Bookings() {
   let bookings = [
     {
-      bookingsID: 1,
       location: 'Phuket, Thailand',
-      checkIn: '24-4-2024',
-      bookingPrice: 220,
+      bedrooms: 2,
+      bathrooms: 2,
+      price: 120,
       rating: 3,
       reviews: 1,
+      checkIn: '24 May 2024',
+      checkOut: '26 May 2024',
+      totNights: 2,
       photo:
         'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_08.png'
     },
@@ -21,6 +24,9 @@ function Bookings() {
       price: 100,
       rating: 5,
       reviews: 12,
+      checkIn: '24 Jun 2024',
+      checkOut: '27 May 2024',
+      totNights: 3,
       photo:
         'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_09.png'
     },
@@ -31,18 +37,11 @@ function Bookings() {
       price: 105,
       rating: 4,
       reviews: 25,
+      checkIn: '04 Apr 2024',
+      checkOut: '16 Apr 2024',
+      totNights: 12,
       photo:
         'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_07.png'
-    },
-    {
-      location: 'Koh Lipe, Thailand',
-      bedrooms: 4,
-      bathrooms: 3,
-      price: 320,
-      rating: 5,
-      reviews: 65,
-      photo:
-        'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_06.png'
     }
   ]
   return (
@@ -50,7 +49,7 @@ function Bookings() {
       <NavBar />
       <div className=" grid grid-cols-5 grid-rows-2 gap-3 mt-3">
         {bookings.map((booking, index) => (
-          <HouseCard key={index} house={booking} />
+          <HouseCard key={index} house={booking} isBooking={true} />
         ))}
       </div>
     </div>
