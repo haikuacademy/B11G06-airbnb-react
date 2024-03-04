@@ -43,6 +43,7 @@ function Reviews(props) {
       <div className="grid grid-cols-3 gap-x-32 p-2">
         <div className="col-span-2">
           <div className="flex items-center gap-1">
+            <FontAwesomeIcon icon={faCommentDots} className="text-gray-400" />
             <h3 className="text-lg font-bold">{totReviews} Reviews</h3>
           </div>
           <div className=" flex items-center gap-1 mb-8">
