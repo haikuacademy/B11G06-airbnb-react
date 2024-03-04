@@ -6,11 +6,15 @@ import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 function HouseCard(props) {
   console.log(props)
   return (
-    <>
+    <div className="border rounded-md ">
       <Link to={'/houses/1'} className=" hover:shadow-md rounded-md">
-        <div className="border">
+        <div>
           <div>
-            <img src={props.house.photo} alt="house" />
+            <img
+              className=" rounded-t-md"
+              src={props.house.photo}
+              alt="house"
+            />
           </div>
           <div className="p-2">
             <h3 className="text-sm font-bold">{props.house.location}</h3>
@@ -61,7 +65,7 @@ function HouseCard(props) {
           </div>
         </div>
       </Link>
-    </>
+    </div>
   )
 }
 
