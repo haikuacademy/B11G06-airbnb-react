@@ -4,7 +4,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
 function HouseCard(props) {
-  console.log(props)
   return (
     <div className="border rounded-md ">
       <Link to={'/houses/1'} className=" hover:shadow-md rounded-md">
@@ -30,37 +29,25 @@ function HouseCard(props) {
             <div className="pt-1">
               <p className=" text-lg font-bold">${props.house.price}</p>
             </div>
-            <div className="flex flex-wrap justify-between pt-2">
+            <div className="flex justify-between pt-2">
               <div className="flex items-center justify-center">
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-[#FBBF24] text-sm"
-                />
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-[#FBBF24] text-sm"
-                />
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-[#FBBF24] text-sm"
-                />
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-[#FBBF24] text-sm"
-                />
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className="text-[#FBBF24] text-sm"
-                />
-                <p className="ml-2 text-sm">{props.house.rating}</p>
+                {[...new Array(props.house.rating)].map((star, index) => (
+                  <FontAwesomeIcon
+                    key={index}
+                    start={star}
+                    icon={faStar}
+                    className="text-[#FBBF24] text-sm"
+                  />
+                ))}
+                <p className="ml-2">{props.house.rating}</p>
               </div>
-              <div className="flex items-center justify-center">
-                <p className="ml-2 text-sm">{props.house.reviews}</p>
+              <p className="ml-2 text-sm">
+                {props.house.reviews}
                 <FontAwesomeIcon
                   icon={faCommentDots}
                   className="text-gray-400 ml-2"
                 />
-              </div>
+              </p>
             </div>
           </div>
         </div>

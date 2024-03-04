@@ -9,7 +9,7 @@ function Houses() {
       bedrooms: 2,
       bathrooms: 2,
       price: 120,
-      rating: 4,
+      rating: 3,
       reviews: 1,
       photo:
         'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_08.png'
@@ -48,6 +48,7 @@ function Houses() {
   const listOfHouses = houses.map((house, index) => (
     <HouseCard key={index} house={house} />
   ))
+  console.log(listOfHouses)
 
   return (
     <div className="container mx-auto">
