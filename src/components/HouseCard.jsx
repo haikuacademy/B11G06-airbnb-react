@@ -50,6 +50,16 @@ function HouseCard(props) {
               </p>
             </div>
           </div>
+          {props.isListing && (
+            <div className="flex gap-2 m-2 mt-0 text-xs">
+              <button className="border rounded p-0.5 px-2 hover:shadow">
+                View
+              </button>
+              <button className="border rounded p-0.5 px-2 hover:shadow">
+                Edit
+              </button>
+            </div>
+          )}
         </div>
       </Link>
     </div>
