@@ -103,11 +103,9 @@ function Review(props) {
         </div>
       </div>
       <div className="flex gap-1 items-center pt-2">
-        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
-        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
-        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
-        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
-        <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        {[...new Array(props.user.rating)].map((i, index) => (
+          <FontAwesomeIcon icon={faStar} className="text-[#FBBF24] text-xs" />
+        ))}
         <p className="text-xs">{props.user.rating}</p>
       </div>
       <div className="pt-2">
