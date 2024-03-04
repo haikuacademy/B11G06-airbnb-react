@@ -1,6 +1,12 @@
 import NavBar from './Nav'
 
 function Profile() {
+  const user = {
+    fristName: 'Linda',
+    lastName: 'Smith',
+    email: 'Lindasmith@example.com',
+    picture: 'https://randomuser.me/api/portraits/women/85.jpg'
+  }
   return (
     <div className="container mx-auto px-32">
       <NavBar />
@@ -13,18 +19,13 @@ function Profile() {
         <div className="flex flex-row items-center">
           <div>
             <img
-              src="https://randomuser.me/api/portraits/women/85.jpg
-"
+              src={user.picture}
               alt="Profile pic"
               className="rounded-full w-14 mr-4"
             />
           </div>
           <div className="flex-auto border-2 rounded-sm my-4">
-            <input
-              type="link"
-              Placeholder="https://.."
-              className="p-2 w-full  "
-            />
+            <input type="link" value={user.picture} className="p-2 w-full  " />
           </div>
         </div>
         {/* First Name*/}
@@ -32,17 +33,17 @@ function Profile() {
           First Name
         </label>
         <div className="flex-auto border-2 rounded-sm mb-4">
-          <input className="p-2 w-full" placeholder="John" />
+          <input className="p-2 w-full" value={user.fristName} />
         </div>
         {/* Last Name*/}
         <label className="text-sm font-semibold text-gray-500">Last Name</label>
         <div className="flex-auto border-2 rounded-sm mb-4">
-          <input className="p-2 w-full" placeholder="John" />
+          <input className="p-2 w-full" value={user.lastName} />
         </div>
         {/* Email Name*/}
         <label className="text-sm font-semibold text-gray-500">Email</label>
         <div className="flex-auto border-2 rounded-sm mb-4">
-          <input className="p-2 w-full" placeholder="John" />
+          <input className="p-2 w-full" value={user.email} />
         </div>
         <div className="flex flex-row justify-between">
           <button className="bg-[#FB7185] px-8 py-2 text-white rounded-sm">
