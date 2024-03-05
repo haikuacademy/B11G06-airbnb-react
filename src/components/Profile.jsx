@@ -34,7 +34,8 @@ function Profile() {
             <input
               type="text"
               onChange={(e) => setPicture(e.target.value)}
-              className="p-2 w-full  "
+              className="p-2 w-full"
+              placeholder="https://..."
             />
           </div>
         </div>
