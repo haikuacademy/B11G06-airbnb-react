@@ -8,28 +8,28 @@ function NavBar() {
           src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1642399114/portal/web%20development%20beginners/05%20Project%20Airbnb/assets/logo-airbnb.png
 "
           alt="Logo"
-          className="w-16"
+          className=" w-28"
         />
       </Link>
-      <div className="flex items-center justify-items-stretch gap-2">
+      <div className="flex items-center justify-items h-10 gap-2">
         <Link to="/bookings">
-          <div className="border-2 px-2 py-1 rounded-sm text-xs font-semibold hover:shadow">
+          <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
             My Bookings
           </div>
         </Link>
         <Link to="/listings">
-          <div className="border-2 px-2 py-1 rounded-sm text-xs font-semibold hover:shadow">
+          <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
             My Listings
           </div>
         </Link>
-        <div className="border-2 px-2 py-1 rounded-sm text-xs font-semibold hover:shadow">
+        <div className="flex justify-center items-center border-2 px-2 py-1  rounded-sm text-xs font-semibold hover:shadow">
           <Link to="/profile">
             <div className="flex items-center justify-items-stretch gap-2">
               <img
                 src="https://randomuser.me/api/portraits/men/84.jpg
               "
                 alt="Profile Pic"
-                className="rounded-full w-4"
+                className="rounded-full w-6"
               />
               <p>Profile </p>
             </div>
