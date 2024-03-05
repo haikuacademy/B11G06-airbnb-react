@@ -1,4 +1,6 @@
+import { logDOM } from '@testing-library/react'
 import NavBar from './Nav'
+import { useState } from 'react'
 
 function Profile() {
   const user = {
@@ -7,6 +9,8 @@ function Profile() {
     email: 'Lindasmith@example.com',
     picture: 'https://randomuser.me/api/portraits/women/85.jpg'
   }
+  const [picture, setPicture] = useState(user.picture)
+  console.log(picture)
   return (
     <div className="container mx-auto px-32">
       <NavBar />
@@ -18,14 +22,21 @@ function Profile() {
         {/*Image and url */}
         <div className="flex flex-row items-center">
           <div>
-            <img
-              src={user.picture}
-              alt="Profile pic"
-              className="rounded-full w-14 mr-4"
-            />
+            {
+              <img
+                src={picture}
+                alt="Profile pic"
+                className="rounded-full w-14 mr-4"
+              />
+            }
           </div>
           <div className="flex-auto border-2 rounded-sm my-4">
-            <input type="link" value={user.picture} className="p-2 w-full  " />
+            <input
+              type="text"
+              onChange={(e) => setPicture(e.target.value)}
+              className="p-2 w-full"
+              placeholder="https://..."
+            />
           </div>
         </div>
         {/* First Name*/}
