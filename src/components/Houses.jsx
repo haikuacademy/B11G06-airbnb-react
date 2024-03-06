@@ -8,10 +8,14 @@ function Houses() {
   const [houses, setHouses] = useState([])
 
   const getHouses = async () => {
-    const url = 'https://haiku-bnb.onrender.com/houses'
-    const response = await axios.get(url)
-    console.log(response)
-    setHouses(response.data)
+    try {
+      const url = 'https://haiku-bnb.onrender.com/houses'
+      const response = await axios.get(url)
+      console.log(response)
+      setHouses(response.data)
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   useEffect(() => {
