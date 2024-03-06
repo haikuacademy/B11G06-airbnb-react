@@ -8,10 +8,14 @@ function Reviews(props) {
   const [reviews, setReviews] = useState([])
 
   const getReviews = async () => {
-    const url = 'https:haiku-bnb.onrender.com/reviews?house=1'
-    const response = await axios.get(url)
-    console.log(response.data)
-    setReviews(response.data)
+    try {
+      const url = 'https:haiku-bnb.onrender.com/reviews?house=1'
+      const response = await axios.get(url)
+      console.log(response.data)
+      setReviews(response.data)
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   useEffect(() => {
