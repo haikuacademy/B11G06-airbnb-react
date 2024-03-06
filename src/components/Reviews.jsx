@@ -1,42 +1,27 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
 function Reviews(props) {
-  let reviews = [
-    {
-      content:
-        'Very good service, English skills by the concierge have been appreciated. Breakfast and dinner were particularly refined and had surprising variety.',
-      rating: 5,
-      date: '23-01-2023',
-      author: {
-        firstName: 'Phil',
-        lastName: 'Collins',
-        picture: 'https://randomuser.me/api/portraits/men/23.jpg'
-      }
-    },
-    {
-      content:
-        'Very bad service, English skills by the concierge have been real baaaaad. Breakfast sucks.',
-      rating: 2,
-      date: '24-03-2023',
-      author: {
-        firstName: 'Karen',
-        lastName: 'Anno Ying',
-        picture: 'https://randomuser.me/api/portraits/women/72.jpg'
-      }
-    },
-    {
-      content: 'Meh!',
-      rating: 3,
-      date: '26-06-2023',
-      author: {
-        FirstName: 'John',
-        lastName: 'Pitt',
-        picture: 'https://randomuser.me/api/portraits/men/29.jpg'
-      }
+  const [reviews, setReviews] = useState([])
+
+  const getReviews = async () => {
+    try {
+      const url = 'https:haiku-bnb.onrender.com/reviews?house=1'
+      const response = await axios.get(url)
+      console.log(response.data)
+      setReviews(response.data)
+    } catch (error) {
+      alert(error.message)
     }
-  ]
+  }
+
+  useEffect(() => {
+    getReviews()
+  }, [])
+
   let totReviews = reviews.length
   return (
     <div>
