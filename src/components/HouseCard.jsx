@@ -51,16 +51,18 @@ function HouseCard(props) {
               </p>
             </div>
           </div>
-          <div className="grid bg-[#ECFDF5] rounded-2 p-2 m-2 place-content-center">
-            <div className="flex">
-              <p className="text-xs ">{props.house.checkIn} -</p>
-              <p className="text-xs pl-1"> {props.house.checkOut}</p>
+          {props.isBooking && (
+            <div className="grid bg-[#ECFDF5] rounded-2 p-2 m-2 place-content-center">
+              <div className="flex">
+                <p className="text-xs ">{props.house.checkIn} -</p>
+                <p className="text-xs pl-1"> {props.house.checkOut}</p>
+              </div>
+              <p className="flex text-xs font-bold gap-1 justify-center">
+                {props.house.totNights} nights = $
+                {props.house.totNights * props.house.price}
+              </p>
             </div>
-            <p className="flex text-xs font-bold gap-1 justify-center">
-              {props.house.totNights} nights = $
-              {props.house.totNights * props.house.price}
-            </p>
-          </div>
+          )}
           {props.isListing && (
             <div className="flex gap-2 m-2 mt-0 text-xs">
               <Link to={'/houses/1'}>
