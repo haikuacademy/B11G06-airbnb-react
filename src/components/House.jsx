@@ -1,8 +1,14 @@
 import Gallery from './Gallery'
 import Reviews from './Reviews'
 import NavBar from './Nav'
+import { useState, useEffect } from 'react'
 
 function House() {
+  const [startDate, setStartDate] = useState(null)
+  const [endDate, setEndDate] = useState(null)
+  const [nights, setNights] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0)
+
   const house = {
     location: 'Phuket, Thailand',
     bedrooms: 2,
@@ -39,6 +45,17 @@ function House() {
       'https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_09.png'
     ]
   }
+
+  useEffect(() => {
+    if (startDate && endDate) {
+      const oneDay = 24 * 60 * 60 * 1000
+      const nights = ((startDate - endDate) / oneDay) * -1
+      setNights(nights)
+      setTotalPrice(nights * house.price)
+    }
+    // eslint-disable-next-line
+  }, [startDate, endDate])
+
   return (
     <div className="m-2">
       <NavBar />
@@ -76,8 +93,21 @@ function House() {
             </div>
             <div>
               <form>
-                <input type="date" className="border mr-1 mb-2" />
-                <input type="date" className="border" />
+                <input
+                  type="date"
+                  className="border mr-1 mb-2"
+                  onChange={(event) =>
+                    setStartDate(new Date(event.target.value))
+                  }
+                />
+                <input
+                  type="date"
+                  className="border"
+                  onChange={(event) => {
+                    console.log(new Date(event.target.value))
+                    setEndDate(new Date(event.target.value))
+                  }}
+                />
                 <textarea
                   className="border w-96 text-sm p-1"
                   placeholder="Please send a message to the host.."
@@ -87,7 +117,8 @@ function House() {
                 ></textarea>
                 <div className=" flex justify-between items-center">
                   <div>
-                    3 nights = <span className="font-bold">$360</span>
+                    {nights} nights ={' '}
+                    <span className="font-bold">${totalPrice}</span>
                   </div>
                   <div>
                     <button className="border rounded p-2 text-white bg-[#FB7185]">

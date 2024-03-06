@@ -1,4 +1,3 @@
-import { logDOM } from '@testing-library/react'
 import NavBar from './Nav'
 import { useState } from 'react'
 
