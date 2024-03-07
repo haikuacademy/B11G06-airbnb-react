@@ -23,7 +23,7 @@ function Houses() {
   }, [])
 
   const listOfHouses = houses.map((house, index) => (
-    <HouseCard key={index} house={house} />
+    <HouseCard key={index} house={house} id={house.house_id} />
   ))
   console.log(listOfHouses)
 
