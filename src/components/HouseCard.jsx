@@ -4,10 +4,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
 function HouseCard(props) {
-  console.log(props)
   return (
     <div className="border rounded-md ">
-      <Link to={'/houses/1'} className=" hover:shadow-md rounded-md">
+      <Link to={`/houses/${props.id}`} className=" hover:shadow-md rounded-md">
         <div>
           <div>
             <img
