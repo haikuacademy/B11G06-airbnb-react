@@ -124,7 +124,7 @@ function House() {
             </div>
           </div>
           <div>
-            <Reviews rating={house.rating} />
+            <Reviews rating={house.rating} id={house.house_id} />
           </div>
         </div>
       )}
