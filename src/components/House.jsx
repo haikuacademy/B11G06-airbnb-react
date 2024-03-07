@@ -3,6 +3,7 @@ import Reviews from './Reviews'
 import NavBar from './Nav'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 function House() {
   const [house, setHouse] = useState({})
@@ -12,16 +13,15 @@ function House() {
   const [totalPrice, setTotalPrice] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
 
+  const { id } = useParams()
   const getHouse = async () => {
     try {
-      let { data } = await axios.get('https://haiku-bnb.onrender.com/houses/1 ')
+      let { data } = await axios.get(
+        `https://haiku-bnb.onrender.com/houses/${id}`
+      )
 
       setHouse(data)
       setIsLoading(false)
-
-      console.log('data======', data)
-      console.log('house======', house)
-      console.log(typeof house)
     } catch (error) {
       alert(error.message)
     }
@@ -29,8 +29,8 @@ function House() {
 
   useEffect(() => {
     getHouse()
-    console.log('house======', house)
-  }, [isLoading])
+    // eslint-disable-next-line
+  }, [isLoading, id])
 
   useEffect(() => {
     if (startDate && endDate) {
@@ -62,10 +62,9 @@ function House() {
                 <div>
                   <img
                     className="rounded-full w-12 h-12"
-                    src={house.host.photo}
+                    src={house.host.picture}
                     alt="Host Profile"
                   />
-                  console.log(house.host)
                 </div>
                 <div className=" block">
                   <div className="text-sm text-gray-400">Hosted by</div>
