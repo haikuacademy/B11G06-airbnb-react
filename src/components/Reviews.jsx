@@ -9,7 +9,7 @@ function Reviews(props) {
 
   const getReviews = async () => {
     try {
-      const url = 'https:haiku-bnb.onrender.com/reviews?house=1'
+      const url = 'https://haiku-bnb.onrender.com/reviews?house_id=1'
       const response = await axios.get(url)
       console.log(response.data)
       setReviews(response.data)
