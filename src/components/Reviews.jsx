@@ -9,9 +9,9 @@ function Reviews(props) {
 
   const getReviews = async () => {
     try {
-      const url = 'https://haiku-bnb.onrender.com/reviews?house_id=1'
+      const url = `https://haiku-bnb.onrender.com/reviews?house_id=${props.id}`
       const response = await axios.get(url)
-      console.log(response.data)
+
       setReviews(response.data)
     } catch (error) {
       alert(error.message)
@@ -20,6 +20,7 @@ function Reviews(props) {
 
   useEffect(() => {
     getReviews()
+    // eslint-disable-next-line
   }, [])
 
   let totReviews = reviews.length
@@ -81,12 +82,12 @@ function Review(props) {
           alt="profile pic"
           className="rounded-full w-8"
         />
-        <div>
+        <>
           <p className="text-xs text-gray-400">22 Jan 2024</p>
           <h6 className="text-xs">
             {props.user.author.firstName} {props.user.author.lastName}
           </h6>
-        </div>
+        </>
       </div>
       <div className="flex gap-1 items-center pt-2">
         {[...new Array(props.user.rating)].map((i, index) => (
@@ -95,7 +96,7 @@ function Review(props) {
         <p className="text-xs">{props.user.rating}</p>
       </div>
       <div className="pt-2">
-        <p className="text-xs leading-1 ">{props.user.content}</p>
+        <p className="text-xs leading-1 ">{props.user.comment}</p>
       </div>
     </div>
   )
