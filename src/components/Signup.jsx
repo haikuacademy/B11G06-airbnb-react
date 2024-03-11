@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+axios.defaults.withCredentials = true
 
 function Signup() {
   const [validEmail, setValidEmail] = useState(true)
