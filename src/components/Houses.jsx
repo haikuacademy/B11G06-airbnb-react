@@ -30,7 +30,7 @@ function Houses() {
   return (
     <div className="container mx-auto">
       <NavBar />
-      <Filter />
+      <Filter setHouses={setHouses} />
       <div className=" grid grid-cols-5 grid-rows-2 gap-3 mt-3">
         {listOfHouses}
       </div>
