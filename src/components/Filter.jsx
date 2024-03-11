@@ -51,7 +51,7 @@ function Filter({ setHouses }) {
     try {
       const response = await axios.get(queryString)
       console.log(queryString)
-      console.log(response.data)
+      setHouses(response.data)
     } catch (error) {
       error.message
     }
