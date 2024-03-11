@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-axios.defaults.withCredentials = true
 
 function Login() {
   const [error, setError] = useState('')
