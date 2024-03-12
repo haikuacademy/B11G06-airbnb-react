@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 function NavBar() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn')
   return (
     <nav className="flex justify-between items-center p-2">
       <Link to="/">
@@ -11,31 +12,44 @@ function NavBar() {
           className=" w-28"
         />
       </Link>
-      <div className="flex items-center justify-items h-10 gap-2">
-        <Link to="/bookings">
-          <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
-            My Bookings
-          </div>
-        </Link>
-        <Link to="/listings">
-          <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
-            My Listings
-          </div>
-        </Link>
-        <div className="flex justify-center items-center border-2 px-2 py-1  rounded-sm text-xs font-semibold hover:shadow">
-          <Link to="/profile">
-            <div className="flex items-center justify-items-stretch gap-2">
-              <img
-                src="https://randomuser.me/api/portraits/men/84.jpg
-              "
-                alt="Profile Pic"
-                className="rounded-full w-6"
-              />
-              <p>Profile </p>
+      {isLoggedIn ? (
+        <>
+          <div className="flex items-center justify-items h-10 gap-2">
+            <Link to="/bookings">
+              <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
+                My Bookings
+              </div>
+            </Link>
+            <Link to="/listings">
+              <div className="flex justify-center items-center border-2 px-2 py-2  rounded-sm text-xs font-semibold hover:shadow">
+                My Listings
+              </div>
+            </Link>
+            <div className="flex justify-center items-center border-2 px-2 py-1  rounded-sm text-xs font-semibold hover:shadow">
+              <Link to="/profile">
+                <div className="flex items-center justify-items-stretch gap-2">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/84.jpg
+                "
+                    alt="Profile Pic"
+                    className="rounded-full w-6"
+                  />
+                  <p>Profile </p>
+                </div>
+              </Link>
             </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <Link
+            to="/login"
+            className="border rounded px-2 py-2 border-rose-300"
+          >
+            Login
           </Link>
-        </div>
-      </div>
+        </>
+      )}
     </nav>
   )
 }
