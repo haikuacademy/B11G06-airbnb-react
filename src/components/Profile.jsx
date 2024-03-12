@@ -1,8 +1,8 @@
 import NavBar from './Nav'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-axios.defaults.withCredentials = true
 import { useNavigate } from 'react-router-dom'
+axios.defaults.withCredentials = true
 
 function Profile() {
   const [user, setUser] = useState({})
