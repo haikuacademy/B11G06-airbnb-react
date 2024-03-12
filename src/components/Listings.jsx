@@ -84,7 +84,7 @@ function Listings() {
                 ></input>
                 <label className="text-xs text-gray-400 ">Description</label>
                 <textarea
-                  name="descriptions"
+                  name="description"
                   rows="3"
                   className="w-full border-2 rounded-sm p-2"
                   placeholder="wonderfull appartment with stunning views"
