@@ -44,7 +44,7 @@ function NavBar() {
         <>
           <Link
             to="/login"
-            className="border rounded px-2 py-2 border-rose-300"
+            className="border rounded px-2 py-2 border-rose-400"
           >
             Login
           </Link>
