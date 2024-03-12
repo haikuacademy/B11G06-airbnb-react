@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+
 import axios from 'axios'
 axios.defaults.withCredentials = true
 
@@ -11,12 +12,16 @@ function Booking(props) {
   const createBooking = async (e) => {
     e.preventDefault()
     const form = new FormData(e.target)
+
     const formObj = Object.fromEntries(form.entries())
+
+    formObj.house_id = props.house.house_id
+
     try {
       const response = await axios.post(
-        'https://haiku-bnb.onrender.com/bookings'
+        'https://haiku-bnb.onrender.com/bookings',
+        formObj
       )
-      console.log('response---->', response.data)
     } catch (e) {
       alert(e.message)
     }
