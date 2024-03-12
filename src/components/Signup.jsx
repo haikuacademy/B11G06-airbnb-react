@@ -40,7 +40,9 @@ function Signup() {
         localStorage.setItem('isLoggedIn', true)
         navigate('/')
       }
-    } catch (error) {}
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   return (

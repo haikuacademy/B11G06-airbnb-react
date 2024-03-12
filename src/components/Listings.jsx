@@ -1,7 +1,15 @@
 import HouseCard from './HouseCard'
 import NavBar from './Nav'
+import axios from 'axios'
+axios.defaults.withCredentials = true
 
 function Listings() {
+  function createHouse(e) {
+    e.preventDefault()
+    try {
+    } catch (err) {}
+  }
+
   const houses = [
     {
       location: 'Phuket, Thailand',
@@ -54,7 +62,7 @@ function Listings() {
         <NavBar />
         <div className="border-2 rounded-sm p-4">
           <h1 className="text-sm mb-4">List a House</h1>
-          <form>
+          <form onSubmit={createHouse}>
             <div className="grid grid-cols-2 gap-32">
               <div>
                 <label className="text-xs text-gray-400 ">Location</label>
