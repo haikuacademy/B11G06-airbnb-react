@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+axios.defaults.withCredentials = true
 
 function Login() {
   const [error, setError] = useState('')
@@ -9,7 +10,6 @@ function Login() {
 
   const submitForm = async (e) => {
     e.preventDefault()
-    setError('')
 
     const formData = new FormData(e.target)
     const email = formData.get('email')
