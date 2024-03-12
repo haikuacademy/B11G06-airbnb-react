@@ -8,6 +8,20 @@ function Booking(props) {
   const [nights, setNights] = useState(0)
   const [totalPrice, setTotalPrice] = useState(0)
 
+  const createBooking = async (e) => {
+    e.preventDefault()
+    const form = new FormData(e.target)
+    const formObj = Object.fromEntries(form.entries())
+    try {
+      const response = await axios.post(
+        'https://haiku-bnb.onrender.com/bookings'
+      )
+      console.log('response---->', response.data)
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
   useEffect(() => {
     if (startDate && endDate) {
       const oneDay = 24 * 60 * 60 * 1000
@@ -24,23 +38,25 @@ function Booking(props) {
         <span className=" text-sm text-gray-400 font-bold">/ night</span>
       </div>
       <div>
-        <form>
+        <form onSubmit={createBooking}>
           <input
             type="date"
+            name="from_date"
             className="border mr-1 mb-2"
-            onChange={(event) => setStartDate(new Date(event.target.value))}
+            onChange={(e) => setStartDate(new Date(e.target.value))}
           />
           <input
             type="date"
+            name="to_date"
             className="border"
-            onChange={(event) => {
-              setEndDate(new Date(event.target.value))
+            onChange={(e) => {
+              setEndDate(new Date(e.target.value))
             }}
           />
           <textarea
+            name="message"
             className="border w-96 text-sm p-1"
             placeholder="Please send a message to the host.."
-            name="comments-to-host"
             cols="30"
             rows="10"
           ></textarea>
