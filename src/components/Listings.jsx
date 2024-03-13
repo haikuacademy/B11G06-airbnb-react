@@ -8,7 +8,7 @@ function Listings() {
   const [houses, setHouses] = useState([])
 
   const listOfHouses = houses.map((house, index) => (
-    <HouseCard key={index} house={house} isListing={true} />
+    <HouseCard key={index} house={house} isListing={true} id={house.house_id} />
   ))
 
   const createHouse = async (e) => {
