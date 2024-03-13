@@ -6,11 +6,14 @@ import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 function HouseCard(props) {
   return (
     <div className="border rounded-md ">
-      <Link to={`/houses/${props.id}`} className=" hover:shadow-md rounded-md">
+      <Link
+        to={`/houses/${props.house.house_id}`}
+        className=" hover:shadow-md rounded-md"
+      >
         <div>
           <div>
             <img
-              className=" rounded-t-md"
+              className=" h-52 w-full rounded-t-md"
               src={props.house.photo}
               alt="house"
             />
@@ -19,7 +22,7 @@ function HouseCard(props) {
             <h3 className="text-sm font-bold">{props.house.location}</h3>
             <div>
               <span className="text-xs text-gray-400 pr-2">
-                {props.house.bedrooms} bedrooms
+                {props.house.rooms} bedrooms
               </span>
               <span className="text-xs text-gray-400 pr-2">·</span>
               <span className="text-xs text-gray-400">
@@ -53,12 +56,12 @@ function HouseCard(props) {
           {props.isBooking && (
             <div className="grid bg-[#ECFDF5] rounded-2 p-2 m-2 place-content-center">
               <div className="flex">
-                <p className="text-xs ">{props.house.checkIn} -</p>
-                <p className="text-xs pl-1"> {props.house.checkOut}</p>
+                <p className="text-xs ">{props.house.from_date} -</p>
+                <p className="text-xs pl-1"> {props.house.to_date}</p>
               </div>
               <p className="flex text-xs font-bold gap-1 justify-center">
-                {props.house.totNights} nights = $
-                {props.house.totNights * props.house.price}
+                {props.house.nights} nights = $
+                {props.house.nights * props.house.price}
               </p>
             </div>
           )}
