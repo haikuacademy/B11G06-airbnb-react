@@ -6,7 +6,10 @@ import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 function HouseCard(props) {
   return (
     <div className="border rounded-md ">
-      <Link to={`/houses/${props.id}`} className=" hover:shadow-md rounded-md">
+      <Link
+        to={`/houses/${props.house.house_id}`}
+        className=" hover:shadow-md rounded-md"
+      >
         <div>
           <div>
             <img
