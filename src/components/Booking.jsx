@@ -8,6 +8,7 @@ function Booking(props) {
   const [endDate, setEndDate] = useState(null)
   const [nights, setNights] = useState(0)
   const [totalPrice, setTotalPrice] = useState(0)
+  const [booked, setBooked] = useState(false)
 
   const createBooking = async (e) => {
     e.preventDefault()
@@ -22,6 +23,7 @@ function Booking(props) {
         'https://haiku-bnb.onrender.com/bookings',
         formObj
       )
+      setBooked(true)
     } catch (e) {
       alert(e.message)
     }
@@ -42,42 +44,48 @@ function Booking(props) {
         <span className=" font-bold">${props.house.price} </span>
         <span className=" text-sm text-gray-400 font-bold">/ night</span>
       </div>
-      <div>
-        <form onSubmit={createBooking}>
-          <input
-            type="date"
-            name="from_date"
-            className="border mr-1 mb-2"
-            onChange={(e) => setStartDate(new Date(e.target.value))}
-          />
-          <input
-            type="date"
-            name="to_date"
-            className="border"
-            onChange={(e) => {
-              setEndDate(new Date(e.target.value))
-            }}
-          />
-          <textarea
-            name="message"
-            className="border w-96 text-sm p-1"
-            placeholder="Please send a message to the host.."
-            cols="30"
-            rows="10"
-          ></textarea>
-          <div className=" flex justify-between items-center">
-            <div>
-              {nights} nights = <span className="font-bold">${totalPrice}</span>
+      {!booked ? (
+        <div>
+          <form onSubmit={createBooking}>
+            <input
+              type="date"
+              name="from_date"
+              className="border mr-1 mb-2"
+              onChange={(e) => setStartDate(new Date(e.target.value))}
+            />
+            <input
+              type="date"
+              name="to_date"
+              className="border"
+              onChange={(e) => {
+                setEndDate(new Date(e.target.value))
+              }}
+            />
+            <textarea
+              name="message"
+              className="border w-96 text-sm p-1"
+              placeholder="Please send a message to the host.."
+              cols="30"
+              rows="10"
+            ></textarea>
+            <div className=" flex justify-between items-center">
+              <div>
+                {nights} nights ={' '}
+                <span className="font-bold">${totalPrice}</span>
+              </div>
+              <div>
+                <button className="border rounded p-2 text-white bg-[#FB7185]">
+                  Reserve
+                </button>
+              </div>
             </div>
-            <div>
-              <button className="border rounded p-2 text-white bg-[#FB7185]">
-                Reserve
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      {/* here is going to be the new div */}
+          </form>
+        </div>
+      ) : (
+        <div className="flex justify-center items-center bg-green-200 p-4">
+          Thanks for your reservation!
+        </div>
+      )}
     </div>
   )
 }
