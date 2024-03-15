@@ -47,6 +47,7 @@ function HouseEdit() {
         `https://haiku-bnb.onrender.com/houses/${id}`,
         house
       )
+
       if (response.status === 200) {
         window.location.href = `/houses/${id}`
       } else {
@@ -79,6 +80,7 @@ function HouseEdit() {
             className="border rounded p-1 w-full"
             type="number"
             defaultValue={house.rooms}
+            onChange={handleInputChange}
           />
           <div className="text-sm mt-2 text-gray-400">Bathrooms</div>
           <input
@@ -86,6 +88,7 @@ function HouseEdit() {
             className="border rounded p-1 w-full"
             type="number"
             defaultValue={house.bathrooms}
+            onChange={handleInputChange}
           />
           <div className="text-sm mt-2 text-gray-400">Price per Night</div>
           <input
@@ -93,6 +96,7 @@ function HouseEdit() {
             className="border rounded p-1 w-full"
             type="number"
             defaultValue={house.price}
+            onChange={handleInputChange}
           />
           <div className="text-sm mt-2 text-gray-400">Description</div>
           <textarea
@@ -101,6 +105,7 @@ function HouseEdit() {
             cols="30"
             rows="10"
             defaultValue={house.description}
+            onChange={handleInputChange}
           ></textarea>
           <div className=" flex gap-2">
             <button className="border rounded p-2 text-white bg-[#FB7185] hover:shadow">
