@@ -44,7 +44,7 @@ function House() {
             <div className=" col-span-2">
               <div className="text-xl font-bold mt-5">{house.location}</div>
               <div className="text-sm text-gray-400 mt-5">
-                {house.bedrooms} rooms · {house.bathrooms} bathrooms
+                {house.rooms} rooms · {house.bathrooms} bathrooms
               </div>
               <div className=" flex gap-2 mt-5">
                 <div>
