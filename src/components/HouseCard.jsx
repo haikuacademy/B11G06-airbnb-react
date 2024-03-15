@@ -72,7 +72,7 @@ function HouseCard(props) {
                   View
                 </button>
               </Link>
-              <Link to={'/houses/1/edit'}>
+              <Link to={`/houses/${props.id}/edit`}>
                 <button className="border rounded p-0.5 px-2 hover:shadow">
                   Edit
                 </button>
